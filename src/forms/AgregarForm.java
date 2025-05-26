@@ -44,13 +44,15 @@ public class AgregarForm extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int id = -1;
-                try{id = Integer.parseInt(txtId.getText());}catch(Exception ex){JOptionPane.showMessageDialog(null,"Ingrese unicamente numeros en Id");}
-                String nombre = txtNombre.getText();
-                String habilidadEspecial = habilidadCombo.getSelectedItem().toString();
-                int nivel = Integer.parseInt(nivelCombo.getSelectedItem().toString());
-                String region = regionCombo.getSelectedItem().toString();
-                listaSimple.agregarNodo(new DefensorEternia(id,nombre,habilidadEspecial,nivel,region));
-                actualizarTabla(listaSimple);
+                try{
+                    id = Integer.parseInt(txtId.getText());
+                    String nombre = txtNombre.getText();
+                    String habilidadEspecial = habilidadCombo.getSelectedItem().toString();
+                    int nivel = Integer.parseInt(nivelCombo.getSelectedItem().toString());
+                    String region = regionCombo.getSelectedItem().toString();
+                    listaSimple.agregarNodo(new DefensorEternia(id,nombre,habilidadEspecial,nivel,region));
+                    actualizarTabla(listaSimple);
+                }catch(Exception ex){JOptionPane.showMessageDialog(null,"Ingrese unicamente numeros en Id");}
             }
         });
 
