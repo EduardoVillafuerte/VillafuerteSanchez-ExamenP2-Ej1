@@ -1,5 +1,6 @@
 package forms;
 
+import estructuras.BusquedaLineal;
 import estructuras.DefensorEternia;
 import estructuras.ListaSimple;
 
@@ -18,6 +19,7 @@ public class ModificarForm extends JFrame {
     private JButton modificarButton;
     private JButton volverButton;
     private JPanel pGeneral;
+    private BusquedaLineal busquedaLineal;
 
     ModificarForm(DefensorEternia defensorEternia){
 
@@ -37,6 +39,17 @@ public class ModificarForm extends JFrame {
         volverButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+        modificarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                defensorEternia.setNombre(txtNombre.getText());
+                defensorEternia.setHabilidadEspecial(habilidadCombo.getSelectedItem().toString());
+                defensorEternia.setNivelPoder(Integer.parseInt(nivelCombo.getSelectedItem().toString()));
+                defensorEternia.setRegion(regionCombo.getSelectedItem().toString());
+                JOptionPane.showMessageDialog(null,"Se modifico con exito");
                 dispose();
             }
         });

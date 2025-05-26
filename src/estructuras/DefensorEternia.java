@@ -37,4 +37,25 @@ public class DefensorEternia {
     public String getHabilidadEspecial() {
         return habilidadEspecial;
     }
+
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setHabilidadEspecial(String habilidadEspecial) {
+        this.habilidadEspecial = habilidadEspecial;
+    }
+
+    public void setNivelPoder(int nivelPoder) {
+        this.nivelPoder = nivelPoder;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
 }
