@@ -33,7 +33,7 @@ public class ModificarForm extends JFrame {
         txtId.setText(""+ defensorEternia.getId());
         txtNombre.setText(defensorEternia.getNombre());
         habilidadCombo.setSelectedItem(defensorEternia.getHabilidadEspecial());
-        nivelCombo.setSelectedItem(defensorEternia.getNivelPoder());
+        nivelCombo.setSelectedIndex(defensorEternia.getNivelPoder()-1);
         regionCombo.setSelectedItem(defensorEternia.getRegion());
 
         volverButton.addActionListener(new ActionListener() {
